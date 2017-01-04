@@ -1,7 +1,9 @@
-var list = ['hola','adios']
-var uniqueRandomArray = require('unique-random-array');
+
+var Controllers = require('./controllers.js');
 
 module.exports = {
-    all: list,
-    random: uniqueRandomArray(list)
+    All: Controllers.All,
+    Random: Controllers.Random,
+    Odd: Controllers.Odd,
+    Even: Controllers.Even,
 }
