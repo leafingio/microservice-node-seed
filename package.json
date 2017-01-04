@@ -1,0 +1,26 @@
+{
+  "name": "microservice-seed",
+  "version": "1.0.0",
+  "description": "Microservice seed",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leafingio/microservice-seed.git"
+  },
+  "keywords": [
+    "microservice",
+    "seed"
+  ],
+  "author": "Albert Parrón <al.parron@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leafingio/microservice-seed/issues"
+  },
+  "homepage": "https://github.com/leafingio/microservice-seed#readme",
+  "dependencies": {
+    "unique-random-array": "1.0.0"
+  }
+}
