@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import Controllers from './controllers'
+import * as Controllers from './controllers'
 
 function isArrayOfNumbers(array) {
     return array.every(function(item){

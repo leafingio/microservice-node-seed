@@ -1,19 +1,19 @@
 import numbers from './numbers.json';
 import uniqueRandomArray from 'unique-random-array';
 
-exports.Random = (number) => {
-    if(number){
-        var randomItems = [];
-        for(var x=0; x<number; x++){
-            var randomNumber = uniqueRandomArray(numbers)()
-            randomItems.push(randomNumber)
-        }
-        return randomItems;
-    } else return uniqueRandomArray(numbers)();
+function generateRandoms(num){
+    let randomItems = [];
+    for(let x=0; x<num; x++){
+        let randomNumber = uniqueRandomArray(numbers)()
+        randomItems.push(randomNumber)
+    }
+    return randomItems;
 }
 
-exports.All = () => numbers;
+export const Random = (number) => number ? generateRandoms(number) : uniqueRandomArray(numbers)() 
 
-exports.Odd = () => numbers.filter(number => number%2 !== 0)
+export const All = () => numbers;
 
-exports.Even = () => numbers.filter(number => number%2 === 0)
+export const Odd = () => numbers.filter(number => number%2 !== 0)
+
+export const Even = () => numbers.filter(number => number%2 === 0)
