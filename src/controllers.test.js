@@ -1,5 +1,5 @@
-var expect = require('chai').expect;
-var Controllers = require('./controllers');
+import { expect } from 'chai';
+import Controllers from './controllers'
 
 function isArrayOfNumbers(array) {
     return array.every(function(item){
