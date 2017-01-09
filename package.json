@@ -1,14 +1,16 @@
 {
   "name": "microservice-seed",
-  "version": "0.2.0-beta.0",
+  "version": "0.0.0-semantically-released",
   "description": "Microservice seed",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit": "git-cz",
+    "test": "mocha src/controllers.test.js -w",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leafingio/microservice-seed.git"
+    "url": "https://github.com/leafingio/microservice-seed.git"
   },
   "keywords": [
     "microservice",
@@ -22,5 +24,15 @@
   "homepage": "https://github.com/leafingio/microservice-seed#readme",
   "dependencies": {
     "unique-random-array": "1.0.0"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "commitizen": "2.9.5",
+    "cz-conventional-changelog": "1.2.0",
+    "mocha": "3.2.0",
+    "semantic-release": "^6.3.2"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   }
 }
